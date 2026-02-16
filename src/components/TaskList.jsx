@@ -1,6 +1,6 @@
 import TaskItem from './TaskItem';
 
-function TaskList({ tasks, completedTasks, onTaskToggle }) {
+function TaskList({ tasks, completedTasks, handleTaskToggle }) {
   return (
     <div>
       <h3>Recommended Tasks:</h3>
@@ -11,7 +11,7 @@ function TaskList({ tasks, completedTasks, onTaskToggle }) {
             key={task}
             taskName={task}
             isCompleted={completedTasks.includes(task)}
-            onToggle={onTaskToggle}
+            onToggle={() => handleTaskToggle(task)}
           />
         ))}
       </div>

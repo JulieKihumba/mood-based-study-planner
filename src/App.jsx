@@ -73,7 +73,7 @@ function App() {
           <TaskList 
             tasks={selectedTasks}
             completedTasks={completedTasks}
-            onTaskToggle={handleTaskToggle}
+            handleTaskToggle={handleTaskToggle}
           />
 
           {allTasksCompleted && (
@@ -86,9 +86,7 @@ function App() {
         </div>
       )}
 
-      {!mood && (
-        <p className='nomood'>Select a mood above to see your tasks</p>
-      )}
+    
     </div>
   );
 }
